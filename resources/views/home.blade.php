@@ -18,12 +18,16 @@
     <div id="cards-container" class="row justify-content-center">
         @foreach($events as $event)
             <div class="card col-md-3 m-1 p-0 w-25">
-                <img src="/img/event_placeholder.jpg" alt="{{$event->title}}" class="rounded-top">
+                @if($event->image == null)
+                    <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}" class="rounded-top">
+                @else
+                    <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="rounded-top">
+                @endif
                 <div class="card-body">
                     <p class="card-date">15/12/2022</p>
                     <h5 class="card-title">{{$event->title}}</h5>
                     <p class="card-participants">X participantes</p>
-                    <a href="#" class="btn btn-primary shadow">Saber mais</a>
+                    <a href="/events/{{ $event->id }}" class="btn btn-primary shadow">Saber mais</a>
                 </div>
             </div>
         @endforeach

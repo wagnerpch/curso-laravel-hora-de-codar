@@ -20,10 +20,10 @@
         <!-- JS da aplicação -->
         <script src="/js/scripts.js"></script>
     </head>
-    <body class="container-fluid g-0">
-        <header>
+    <body>
+        <header class="container-fluid g-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
+                <div class="container p-0">
                     <a class="navbar-brand" href="/">
                         <img src="/img/hdcevents_logo.svg" alt="HDC Events" id="logo" class="rounded">
                     </a>
@@ -49,8 +49,17 @@
                 </div>
             </nav>
         </header>
-        @yield('content')
-        <footer class="text-white bg-secondary">
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                        <p class="alert alert-primary text-center m-0" role="alert">{{session('msg')}}</p>
+                    @endif
+                </div>
+                @yield('content')
+            </div>
+        </main>
+        <footer class="container-fluid text-white bg-secondary">
             <div class="row justify-content-center">
                 <div class="col mt-5 mb-5">
                     <p class="text-center mt-2 mb-2">HDC Events &copy; 2022</p>
