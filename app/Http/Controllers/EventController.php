@@ -29,6 +29,8 @@ class EventController extends Controller
             $request->image->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
         }
+        $event->items = $request->items;
+        $event->date = $request->date;
         $event->save();
         return redirect('/')->with('msg', 'Evento criado com sucesso');
     }

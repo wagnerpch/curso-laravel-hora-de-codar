@@ -24,13 +24,16 @@
                     <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}" class="rounded-top">
                 @endif
                 <div class="card-body">
-                    <p class="card-date">15/12/2022</p>
+                    <p class="card-date">{{date('d/m/Y', strtotime($event->date))}}</p>
                     <h5 class="card-title">{{$event->title}}</h5>
                     <p class="card-participants">X participantes</p>
                     <a href="/events/{{ $event->id }}" class="btn btn-primary shadow">Saber mais</a>
                 </div>
             </div>
         @endforeach
+        @if(count($events)==0)
+            <p class="text-center fw-bold mt-5 mb-5">Não há eventos disponíveis</p>
+        @endif
     </div>
 </div>
 
