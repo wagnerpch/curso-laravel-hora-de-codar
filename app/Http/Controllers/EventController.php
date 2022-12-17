@@ -7,9 +7,16 @@ use App\Models\Event;
 
 class EventController extends Controller
 {
-    public function index(){       
-        $events = Event::all(); //Chama todos os eventos do banco para a View
-        return view('home',['events' => $events]);
+    public function index(){
+        $search = request('search');
+        if($search) {
+            $events = Event::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+        } else {
+            $events = Event::all(); //Chama todos os eventos do banco para a View
+        }        
+        return view('home',['events' => $events, 'search' => $search]);
     }
 
     public function create(){
