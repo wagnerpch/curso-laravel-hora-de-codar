@@ -11,7 +11,9 @@
             @csrf
             <div class="form-group mt-2">
                 <label for="image">Imagem:</label>
-                <input type="file" class="form-control-file" id="image" name="image">
+                <div class="d-flex">
+                    <input type="file" class="form-control-file" id="image" name="image">
+                </div>
             </div>
             <div class="form-group mt-2">
                 <label for="title">Evento:</label>

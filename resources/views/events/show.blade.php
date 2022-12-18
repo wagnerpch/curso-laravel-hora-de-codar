@@ -20,7 +20,7 @@
     <div class="col-md-6">
         <p class=""><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
         <p class=""><ion-icon name="people-outline"></ion-icon> X Participantes</p>
-        <p class=""><ion-icon name="star-outline"></ion-icon> Dono do Evento</p>
+        <p class=""><ion-icon name="star-outline"></ion-icon> {{ $eventOwner['name'] }}</p>
         <a href="#" class="btn btn-warning shadow" id="event-submit" name="event-submit">Confirmar Presença</a>
         @if($event->items != null)
         <div class="mt-3">

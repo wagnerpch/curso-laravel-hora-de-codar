@@ -20,7 +20,7 @@
         <!-- JS da aplicação -->
         <script src="/js/scripts.js"></script>
     </head>
-    <body>
+    <body class="min-vh-100">
         <header class="container-fluid g-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container p-0">
@@ -38,18 +38,31 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/events/create">Criar eventos</a>
                             </li>
+                            @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Entrar</a>
+                                <a class="nav-link" href="/dashboard">Meus eventos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cadastrar</a>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <a class="nav-link" href="/logout" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+                                </form>
                             </li>
+                            @endauth
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register">Cadastrar</a>
+                            </li>
+                            @endguest
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="vh-100">
             <div class="container-fluid">
                 <div class="row">
                     @if(session('msg'))
