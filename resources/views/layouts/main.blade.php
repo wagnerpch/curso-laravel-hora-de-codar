@@ -62,7 +62,7 @@
                 </div>
             </nav>
         </header>
-        <main class="vh-100">
+        <main class="mh-100">
             <div class="container-fluid">
                 <div class="row">
                     @if(session('msg'))
@@ -74,8 +74,8 @@
         </main>
         <footer class="container-fluid text-white bg-secondary">
             <div class="row justify-content-center">
-                <div class="col mt-5 mb-5">
-                    <p class="text-center mt-2 mb-2">HDC Events &copy; 2022</p>
+                <div class="col my-5">
+                    <p class="text-center my-2">HDC Events &copy; 2022</p>
                 </div>
             </div>
         </footer>

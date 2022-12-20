@@ -19,4 +19,10 @@ class Event extends Model
         return $this->belongsTo('App\Models\User'); //Pertence a um
     }
 
+    protected $guarded = [];
+
+    public function users(){
+        return $this->belongsToMany('App\Models\User'); //Pertence a muitos
+    }
+
 }
