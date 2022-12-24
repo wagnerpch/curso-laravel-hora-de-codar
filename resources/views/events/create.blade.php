@@ -17,15 +17,15 @@
             </div>
             <div class="form-group mt-2">
                 <label for="title">Evento:</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento"></input>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
             </div>
             <div class="form-group mt-2">
                 <label for="title">Data do evento:</label>
-                <input type="date" class="form-control" id="date" name="date"></input>
+                <input type="date" class="form-control" id="date" name="date">
             </div>
             <div class="form-group mt-2">
                 <label for="city">Cidade:</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento"></input>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento">
             </div>
             <div class="form-group mt-2">
                 <label for="private">O evento é privado?</label>

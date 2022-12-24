@@ -24,20 +24,19 @@
             </div>
             <div class="form-group mt-2">
                 <label for="title">Evento:</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" value="{{ $event->title }}"></input>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" value="{{ $event->title }}">
             </div>
             <div class="form-group mt-2">
                 <label for="title">Data do evento:</label>
-                <input type="date" class="form-control" id="date" name="date" value="{{ $event->date->format('Y-m-d') }}"></input>
+                <input type="date" class="form-control" id="date" name="date" value="{{ $event->date->format('Y-m-d') }}">
             </div>
             <div class="form-group mt-2">
                 <label for="city">Cidade:</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}"></input>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}">
             </div>
             <div class="form-group mt-2">
                 <label for="private">O evento é privado?</label>
                 <select class="form-control" id="private" name="private">
-                    
                     <option value="0" {{ $event->private == 0 ? "selected" : ""}} >Não</option>
                     <option value="1" {{ $event->private == 1 ? "selected" : ""}} >Sim</option>
                 </select>
@@ -65,7 +64,7 @@
                     </div>
             </div>
             <div class="form-group my-4 text-center">
-                <input type="submit" class="form-control btn btn-primary w-50" value="Salvar"></input>
+                <input type="submit" class="form-control btn btn-primary w-50" value="Salvar">
             </div>
         </form>
     </div>
