@@ -75,7 +75,7 @@
         <footer class="container-fluid text-white bg-secondary">
             <div class="row justify-content-center">
                 <div class="col my-5">
-                    <p class="text-center my-2">HDC Events &copy; 2022</p>
+                    <p class="text-center my-2">HDC Events &copy; 2023</p>
                 </div>
             </div>
         </footer>
